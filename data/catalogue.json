@@ -1,0 +1,18 @@
+{
+  "SE 444": {"title": "Software Security", "credits": 3, "prerequisites": ["SE 301", "CS 220"], "offered": ["Fall"]},
+  "SE 301": {"title": "Software Design", "credits": 3, "prerequisites": ["CS 102"], "offered": ["Fall", "Spring"]},
+  "SE 320": {"title": "Software Testing", "credits": 3, "prerequisites": ["SE 301"], "offered": ["Spring"]},
+  "SE 401": {"title": "Software Project Management", "credits": 3, "prerequisites": ["SE 301"], "offered": ["Fall"]},
+  "SE 490": {"title": "Senior Project", "credits": 4, "prerequisites": ["SE 401", "SE 320"], "offered": ["Fall", "Spring"]},
+  "CS 101": {"title": "Introduction to Programming", "credits": 3, "prerequisites": [], "offered": ["Fall", "Spring"]},
+  "CS 102": {"title": "Object-Oriented Programming", "credits": 3, "prerequisites": ["CS 101"], "offered": ["Fall", "Spring"]},
+  "CS 201": {"title": "Data Structures", "credits": 3, "prerequisites": ["CS 102"], "offered": ["Fall", "Spring"]},
+  "CS 220": {"title": "Computer Networks", "credits": 3, "prerequisites": ["CS 201"], "offered": ["Spring"]},
+  "CS 310": {"title": "Algorithms", "credits": 3, "prerequisites": ["CS 201", "MATH 201"], "offered": ["Fall"]},
+  "CS 340": {"title": "Database Systems", "credits": 3, "prerequisites": ["CS 201"], "offered": ["Fall", "Spring"]},
+  "CS 350": {"title": "Operating Systems", "credits": 3, "prerequisites": ["CS 201"], "offered": ["Spring"]},
+  "AI 360": {"title": "Machine Learning", "credits": 3, "prerequisites": ["CS 201", "STAT 210"], "offered": ["Fall"]},
+  "AI 470": {"title": "Deep Learning", "credits": 3, "prerequisites": ["AI 360"], "offered": ["Spring"]},
+  "MATH 201": {"title": "Discrete Mathematics", "credits": 3, "prerequisites": [], "offered": ["Fall", "Spring"]},
+  "STAT 210": {"title": "Probability and Statistics", "credits": 3, "prerequisites": ["MATH 201"], "offered": ["Fall", "Spring"]}
+}

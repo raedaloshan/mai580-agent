@@ -1,27 +1,19 @@
 from langgraph.graph import StateGraph, START, END
+from langgraph.prebuilt import ToolNode, tools_condition
 from app.state import State
-from app.nodes import (classify, route_by_intent,
-                       answer_policy, answer_course, answer_gpa, answer_general)
+from app.tools import TOOLS
+from app.nodes import agent, final_answer
 
 
 def build_graph():
     builder = StateGraph(State)
-    builder.add_node("classify", classify)
-    builder.add_node("answer_policy", answer_policy)
-    builder.add_node("answer_course", answer_course)
-    builder.add_node("answer_gpa", answer_gpa)
-    builder.add_node("answer_general", answer_general)
+    builder.add_node("agent", agent)
+    builder.add_node("tools", ToolNode(TOOLS))
+    builder.add_node("final_answer", final_answer)
 
-    builder.add_edge(START, "classify")
-    builder.add_conditional_edges(
-        "classify",
-        route_by_intent,
-        {"policy": "answer_policy", "course_info": "answer_course",
-         "gpa": "answer_gpa", "planning": "answer_general", "other": "answer_general"},
-    )
-    builder.add_edge("answer_policy", END)
-    builder.add_edge("answer_course", END)
-    builder.add_edge("answer_gpa", END)
-    builder.add_edge("answer_general", END)
+    builder.add_edge(START, "agent")
+    builder.add_conditional_edges("agent", tools_condition)   # -> "tools" or END
+    builder.add_edge("tools", "final_answer")
+    builder.add_edge("final_answer", END)
 
     return builder.compile()

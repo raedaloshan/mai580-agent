@@ -3,6 +3,22 @@ from app.state import State
 from typing import Literal
 from pydantic import BaseModel, Field
 
+#--------------------
+from app.tools import TOOLS
+
+model_with_tools = model.bind_tools(TOOLS)
+
+
+def agent(state: State) -> dict:
+    system = SystemMessage("You are an academic advisor. Use tools for course facts and arithmetic.")
+    return {"messages": [model_with_tools.invoke([system] + state["messages"])]}
+
+
+def final_answer(state: State) -> dict:
+    return {"messages": [model.invoke(state["messages"])]}
+
+#--------------------
+
 Intent = Literal["policy", "course_info", "gpa", "planning", "other"]
 
 
@@ -78,3 +94,5 @@ def answer_gpa(state: State) -> dict:
 def answer_general(state: State) -> dict:
     return _answer(state, "You are a helpful academic advisor. Help with course planning "
                           "and general student questions.")
+
+
