@@ -1,0 +1,20 @@
+{"text": "Can I take 21 credits this semester?", "intent": "policy"}
+{"text": "What is the attendance policy for absences?", "intent": "policy"}
+{"text": "Can I withdraw from a course after the deadline?", "intent": "policy"}
+{"text": "How many times can I repeat a failed course?", "intent": "policy"}
+{"text": "What are the prerequisites of SE 444?", "intent": "course_info"}
+{"text": "How many credits is CS 201?", "intent": "course_info"}
+{"text": "Who teaches the machine learning course?", "intent": "course_info"}
+{"text": "Is SE 444 offered in the spring?", "intent": "course_info"}
+{"text": "I got A in a 3-credit course and C in a 4-credit course. What is my GPA?", "intent": "gpa"}
+{"text": "What grade do I need in my last course to reach a 3.0?", "intent": "gpa"}
+{"text": "How is the cumulative GPA calculated?", "intent": "gpa"}
+{"text": "If I get B+ in all my courses, what will my GPA be?", "intent": "gpa"}
+{"text": "Which electives should I take next year?", "intent": "planning"}
+{"text": "What should I take next semester to graduate on time?", "intent": "planning"}
+{"text": "Is it better to take statistics before machine learning?", "intent": "planning"}
+{"text": "Help me plan my courses for the AI track.", "intent": "planning"}
+{"text": "Where is the library?", "intent": "other"}
+{"text": "What is the weather today?", "intent": "other"}
+{"text": "Can you recommend a laptop for programming?", "intent": "other"}
+{"text": "How do I reset my university email password?", "intent": "other"}
